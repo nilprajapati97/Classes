@@ -1,0 +1,36 @@
+Bit and Byte Access Using Struct + Union in C 
+
+✅ Benefits
+ • Flexible: Bit, nibble, or byte-level access
+ • Memory Efficient: Same location, different views
+ • Readable: Descriptive field names instead of masks
+ • Hardware Friendly: Perfect for memory-mapped registers
+
+
+
+typedef union {
+ uint8_t byte; // Full byte access
+
+ struct { // Individual bit access
+ uint8_t bit0:1;
+ uint8_t bit1:1;
+ uint8_t bit2:1;
+ uint8_t bit3:1;
+ uint8_t bit4:1;
+ uint8_t bit5:1;
+ uint8_t bit6:1;
+ uint8_t bit7:1;
+ } bits;
+
+ struct { // Nibble access
+ uint8_t lower:4;
+ uint8_t upper:4;
+ } nibbles;
+
+ struct { // Custom application mapping
+ uint8_t enable:1;
+ uint8_t mode:2;
+ uint8_t priority:3;
+ uint8_t reserved:2;
+ } settings;
+} PortRegister;
