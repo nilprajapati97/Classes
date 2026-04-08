@@ -144,16 +144,219 @@ After Reversing Last 3 Nodes:
 
 ---
 
-## 💡 Logic (easy to understand):
-
-1. Count total nodes
-2. Go to `(length - N)` position
-3. Reverse last N nodes
-4. Connect both parts
+Great 👍 Let’s take **10 nodes** and clearly understand **reverse last N nodes** step-by-step.
 
 ---
 
-If you want, I can also:
+# 📌 Example
+
+**Linked List (10 nodes):**
+
+```text
+10 -> 20 -> 30 -> 40 -> 50 -> 60 -> 70 -> 80 -> 90 -> 100 -> NULL
+```
+
+Let **N = 4**
+
+👉 We need to reverse last 4 nodes:
+
+```text
+70 -> 80 -> 90 -> 100
+```
+
+---
+
+# ✅ Step 1: Count nodes
+
+Total nodes = **10**
+
+Last N = **4**
+
+👉 First part size:
+
+```
+10 - 4 = 6 nodes
+```
+
+---
+
+# ✂️ Step 2: Split the list
+
+### First Part (6 nodes):
+
+```text
+10 -> 20 -> 30 -> 40 -> 50 -> 60 -> NULL
+```
+
+### Last N Part (4 nodes):
+
+```text
+70 -> 80 -> 90 -> 100 -> NULL
+```
+
+---
+
+# 🔁 Step 3: Reverse last N nodes
+
+Before reverse:
+
+```text
+70 -> 80 -> 90 -> 100 -> NULL
+```
+
+After reverse:
+
+```text
+100 -> 90 -> 80 -> 70 -> NULL
+```
+
+---
+
+# 🔗 Step 4: Join both parts
+
+Connect:
+
+```text
+60 -> 100
+```
+
+---
+
+# 🎯 Final Answer
+
+```text
+10 -> 20 -> 30 -> 40 -> 50 -> 60 -> 100 -> 90 -> 80 -> 70 -> NULL
+```
+
+---
+
+# 🔍 Detailed Pointer Movement (Important)
+
+We reverse this part:
+
+```text
+70 -> 80 -> 90 -> 100 -> NULL
+```
+
+---
+
+## Iteration 1
+
+```text
+prev = NULL
+curr = 70
+next = 80
+```
+
+After reverse:
+
+```text
+70 -> NULL
+```
+
+---
+
+## Iteration 2
+
+```text
+prev = 70
+curr = 80
+next = 90
+```
+
+After reverse:
+
+```text
+80 -> 70 -> NULL
+```
+
+---
+
+## Iteration 3
+
+```text
+prev = 80
+curr = 90
+next = 100
+```
+
+After reverse:
+
+```text
+90 -> 80 -> 70 -> NULL
+```
+
+---
+
+## Iteration 4
+
+```text
+prev = 90
+curr = 100
+next = NULL
+```
+
+After reverse:
+
+```text
+100 -> 90 -> 80 -> 70 -> NULL
+```
+
+---
+
+# 📊 Full Visualization
+
+## Before:
+
+```text
+10 -> 20 -> 30 -> 40 -> 50 -> 60 -> 70 -> 80 -> 90 -> 100 -> NULL
+```
+
+## Split:
+
+```text
+First: 10 -> 20 -> 30 -> 40 -> 50 -> 60 -> NULL
+Last : 70 -> 80 -> 90 -> 100 -> NULL
+```
+
+## Reverse last part:
+
+```text
+100 -> 90 -> 80 -> 70 -> NULL
+```
+
+## Final:
+
+```text
+10 -> 20 -> 30 -> 40 -> 50 -> 60 -> 100 -> 90 -> 80 -> 70 -> NULL
+```
+
+---
+
+# 🧠 Easy Exam Trick
+
+👉 Just remember:
+
+**Total nodes = T**
+
+**Reverse last N → split at (T - N)**
+
+---
+
+# ⚡ Shortcut Formula
+
+```text
+Split position = Total Nodes - N
+```
+
+---
+
+If you want, I can next show:
+
+* 🔥 Reverse first N nodes (with 10 nodes)
+* 🔥 Reverse in groups of K (very important)
+* 🔥 Dry run with code line-by-line
+
 
 * Draw step-by-step diagram (very useful 🔥)
 * Give shorter exam version
