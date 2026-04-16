@@ -1,63 +1,52 @@
-Operator Overloading
-==========================================================
+<div align="center">
 
-Operators That Can Be Overloaded Using Member Functions:
-Unary Operators:
+<div style="background: linear-gradient(135deg, #FF8C00, #3A1E00); padding: 30px 40px; border-radius: 16px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
 
-    + (Unary Plus)
-    - (Unary Minus)
-    ++ (Prefix Increment)
-    -- (Prefix Decrement)
-    * (Dereference)
-    & (Address-of)
-    Binary Operators:
+<h1 style="color: white; margin: 0; font-size: 2.2em; letter-spacing: 1px;">➕ OperatorOverloading</h1>
 
-    + (Addition)
-    - (Subtraction)
-    * (Multiplication)
-    / (Division)
-    % (Modulus)
-    ^ (Bitwise XOR)
-    & (Bitwise AND)
-    | (Bitwise OR)
-    = (Assignment)
-    +=, -=, *=, /=, %=, ^=, &=, |=
-    <<, >> (Bitwise Shift)
-    <<=, >>= (Bitwise Shift Assignment)
-    [] (Subscript Operator)
-    () (Function Call Operator)
-    -> (Member Access)
+<p style="color: rgba(255,255,255,0.85); margin: 10px 0 0 0; font-size: 1.1em;">Complete operator overloading practice suite</p>
 
-Operators That Can Be Overloaded Using Friend Functions:
-================================================================================================================================================================
-A friend function is needed when the left-hand operand is not an object of the class (e.g., cout << obj, obj1 + obj2 when + is implemented outside the class).
+</div>
 
-1. Binary Operators:
+</div>
 
-    + (Addition)
-    - (Subtraction)
-    * (Multiplication)
-    / (Division)
-    % (Modulus)
-    ^ (Bitwise XOR)
-    & (Bitwise AND)
-    | (Bitwise OR)
-    ==, != (Equality and Inequality)
-    <, >, <=, >= (Relational Operators)
-    <<, >> (Bitwise Shift & Stream Operators)
+📍 `Workspace / Classes / 02_ProgrammingInCPP / Practice / 04_OperatorOverloading`
 
-2. Stream Operators (Must Be Friend Functions):
+![Category](https://img.shields.io/badge/Category-C++%20Operators-FF8C00?style=flat-square) ![Scripts](https://img.shields.io/badge/Scripts-1-4B0082?style=flat-square) ![Subdirs](https://img.shields.io/badge/Subdirs-10-6A5ACD?style=flat-square)
 
-    << (Output Stream)
-    >> (Input Stream)
+---
 
-Key Differences Between Member and Friend Overloading:
-===============================================================
+<h2 style="color: #FF8C00;">📂 Subdirectories</h2>
 
-Feature                                     Member Function                     Friend Function
--------------------------------------------------------------------------------------------------------
-Syntax                                      ClassName::operator()               operator() outside the class
-Can Access Private Members?                 Yes                                 Yes (friend function has access)
-Left Operand Requirement                    Must be an object of the class      Can be a non-class object
-Used For                                    Unary and binary operators          Mostly binary operators
-Stream Operators (<<, >>)                   ❌ (Cannot be member functions)    ✅ (Must be friend functions)
+| | Directory | Description |
+|:---:|:---|:---|
+| ➕ | **[BinaryOperators](01_BinaryOperators/README.md)** | Binary operator overloading practice |
+| ➕ | **[UnaryOperators](02_UnaryOperators/README.md)** | Unary operator overloading practice |
+| ➕ | **[ArrayAccess](03_ArrayAccess/README.md)** | Array subscript operator [] overloading |
+| ➕ | **[AssignmentOperator](04_AssignmentOperator/README.md)** | Assignment operator overloading |
+| ➕ | **[NewDeleteOperators](05_NewDeleteOperators/README.md)** | Custom new/delete operator overloading |
+| ➕ | **[IncrementDecrement](06_IncrementDecrement/README.md)** | Prefix/postfix increment/decrement overloading |
+| ➕ | **[FunctionCallOperator](07_FunctionCallOperator/README.md)** | Function call operator () — functors |
+| ➕ | **[ArrowOperator](08_ArrowOperator/README.md)** | Arrow operator -> overloading for smart pointers |
+| ➕ | **[WhyCantOverload](09_WhyCantOverload/README.md)** | Operators that cannot be overloaded |
+| ➕ | **[AllOperators](10_AllOperators/README.md)** | Comprehensive operator overloading reference |
+
+<h2 style="color: #FF8C00;">📄 Files</h2>
+
+| | File | Type |
+|:---:|:---|:---|
+| 🐚 | [clean.sh](clean.sh) | Shell Script |
+
+---
+
+<div align="center">
+
+<p style="color: #888; font-size: 0.9em;">[⬆️ Parent Directory](../README.md) &nbsp;|&nbsp; [🏠 Workspace Root](../../../../README.md)</p>
+
+</div>
+
+---
+
+<div align="center">
+<sub style="color: #666;">Auto-generated README — <b style="color: #FF8C00;">C++ Operators</b></sub>
+</div>
