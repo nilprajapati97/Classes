@@ -139,20 +139,22 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/nilprajapati97/00_Class_Training.git
+git clone https://github.com/<your-username>/00_Class_Training.git
 cd 00_Class_Training
 
-# Compile any C example
-gcc -Wall -o output 01_ProgrammingInC/Class/<topic>/<file>.c
+# Compile a C example (e.g., array separation exercise)
+gcc -Wall -o arraysep \
+    01_ProgrammingInC/Class/AsArrays/ArraySeparation/Arraysep.c
 
-# Compile any C++ example
-g++ -std=c++17 -Wall -o output 02_ProgrammingInCPP/Practice/<module>/<file>.cpp
+# Compile a C++ example (e.g., constructors module)
+g++ -std=c++17 -Wall -o constructors \
+    02_ProgrammingInCPP/Practice/03_Constructors/01_Default.cpp
 
-# Build and run a TCP server example
+# Build and run the TCP server/client example
 gcc -o server 03_TCP_IP/client_server/server.c
 gcc -o client 03_TCP_IP/client_server/client.c
-./server &
-./client
+./server &   # start server in background
+./client     # connect with client
 ```
 
 ---
